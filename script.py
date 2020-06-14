@@ -35,11 +35,11 @@ def get_ira(irb, iB):
 def get_iz(Vc, Vz, Rz, ira):
     return (Vc - Vz)/Rz - ira
 
-def get_max_Rz(Vc, Vz, ira, iz):
-    return (Vc - Vz)/(ira + iz)
+def get_max_Rz(Vc, Vz, ira):
+    return (Vc - Vz)/(ira)
 
-def get_P_Rz(Vc, Vz, ira, iz):
-    return (Vc - Vz)*(ira + iz)
+def get_P_Rz(Vc, Vz, ira):
+    return (Vc - Vz)*(ira)
 
 V_max += V_be
 V_min += V_be
@@ -56,11 +56,11 @@ ira_max = get_ira(irb_max, iB)
 #iz_min = get_iz(Vc, Vz, Rz, ira_max)
 #iz_max = get_iz(Vc, Vz, Rz, ira_min)
 
-Rz_min = get_max_Rz(Vc, Vz, ira_max, 0)
-Rz_max = get_max_Rz(Vc, Vz, ira_min, 0)
+Rz_min = get_max_Rz(Vc, Vz, ira_max)
+Rz_max = get_max_Rz(Vc, Vz, ira_min)
 
-P_Rz_min = get_P_Rz(Vc, Vz, ira_min, 0)
-P_Rz_max = get_P_Rz(Vc, Vz, ira_max, 0)
+P_Rz_min = get_P_Rz(Vc, Vz, ira_min)
+P_Rz_max = get_P_Rz(Vc, Vz, ira_max)
 
 print('')
 print('Resistência máxima do potenciômetro:', R)
