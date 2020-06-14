@@ -53,9 +53,6 @@ irb_max = get_irb(V_max, Rb, R, R)
 ira_min = get_ira(irb_min, iB)
 ira_max = get_ira(irb_max, iB)
 
-#iz_min = get_iz(Vc, Vz, Rz, ira_max)
-#iz_max = get_iz(Vc, Vz, Rz, ira_min)
-
 Rz_min = get_max_Rz(Vc, Vz, ira_max)
 Rz_max = get_max_Rz(Vc, Vz, ira_min)
 

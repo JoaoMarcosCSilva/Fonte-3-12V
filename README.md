@@ -1,5 +1,22 @@
 # Fonte 3-12V
  Circuito de uma fonte de 100mA de 3 a 12 volts
+ Para executar o código com os cálculos dos valores finais obtidos (listados abaixo), execute:
+    python script.py
+
+Valores pré-determinados:
+- Tensão máxima e mínima: 12v e 3v
+- Queda de tensão entre a base e o emissor do transistor: 0.714612e (medido no falstad)
+- Resistência do resistor à direita do potenciômetro: 2k (explicação abaixo)
+- Ganho do transistor: 400 (explicação abaixo)
+- Corrente máxima na base do transistor: 0.249377 mA (valor aproximado pode ser calculado a partir do ganho e da corrente máxima no emissor, de 100mA. Porém, esse valor exato foi o medido no falstad)
+- Tensão mínima garantida pelo capacitor: 18v (o memso teve sua capacitância escolhida de modo a garantir esse valor)
+- Tensão de quebra do diodo zener: 13v (explicação abaixo)
+- Razão do transformador: 0.15 (explicação abaixo)
+
+Valores calculados a partir dos definidos acima:
+- Resistência máxima do potenciômetro: calculada em 4.2798210388k
+- Resistência do resistor à esquerda do potenciômetro (entre o mesmo e o diodo zener): calculada em 127.7656745249
+- Resistência acima do diodo zener: calculada em 2.1987160495k
 
 # O potenciômetro e resistores adjacentes
  No circuito, pode-se ver que existem dois resistores adjacentes ao potenciômetro.
@@ -10,18 +27,24 @@
 
  ## O potenciômetro e o resistor à sua esquerda
  É garantido que a tensão em cima do diodo zener será sempre 13v. Assim, as resistências do resistor à esquerda do potenciômetro e do próprio potenciômetro podem ser calculadas para que a tensão de saída da fonte, a partir dos seguintes dados conhecidos:
-    - Resistência do resistor à direita do potenciômetro (definida em 2k)
-    - Tensão do diodo zener (definida em 13v)
-    - Queda de tensão entre a base e o emissor do transistor (medida no falstad em 0.714612mV)
-    - Corrente máxima passando pela base do transistor (como o transistor usado tem um ganho de 400x, essa corrente é aproximadamente 1/400 de 100mA, medido no falstad como 249.377uA)
-O código para tal cálculo está no arquivo script.py, nas funções get_R e get_Ra, além das linhas 44-48
+
+- Resistência do resistor à direita do potenciômetro (definida em 2k)
+- Tensão do diodo zener (definida em 13v)
+- Queda de tensão entre a base e o emissor do transistor (medida no falstad em 0.714612mV)
+- Corrente máxima passando pela base do transistor (como o transistor usado tem um ganho de 400x, essa corrente é aproximadamente 1/400 de 100mA, medido no falstad como 249.377uA)
+
+O código para esse cálculo está no arquivo script.py, nas funções get_R e get_Ra, além das linhas 44-48
 
 # O diodo zener e o resistor acima dele
 O diodo zener deve possuir uma tensão de quebra de 13v, para permitir produzir 12v na saída após a queda no transistor
 O valor do resistor acima dele foi calculado para que a tensão mínima em cima do zener seja sempre 13v, usando as seguintes informações:
-    - Tensão mínima garantida pelo capacitor (18v no caso)
-    - Tensão de quebra do diodo zener (13v)
-    - Corrente passando pelo próprio resistor (calculada com as resistências do potenciômetro e dos resistores adjacentes a ele, valores encontrados anteriormente, além da corrente na base do transistor)
+
+- Tensão mínima garantida pelo capacitor (18v no caso)
+- Tensão de quebra do diodo zener (13v)
+- Corrente passando pelo próprio resistor (calculada com as resistências do potenciômetro e dos resistores adjacentes a ele, valores encontrados anteriormente, além da corrente na base do transistor)
+
+O código para esse cálculo está no arquivo script.py, nas funções get_max_Rz, get_ira e get_irb, além das linhas 50-57
+
 Por não ser ideal, o diodo zener não "quebra" a tensão exatamente em 13v, mas um pouco abaixo, o que faz a tensão de saída oscilar um pouco
 
 # O capacitor e o transformador
