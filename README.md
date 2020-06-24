@@ -33,11 +33,11 @@ O valor calculado de 2198.7160495 será aproximado por um resistor de 2k e um re
 - 1 resistor 2k de 1/4 W (A potência real não passará de 100mW): R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-2k-5-1-4w.html))
 - 1 resistor 200R de 1/4 W (A potência real não passará de 100mW) R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-200r-5-1-4w.html))
 ## Capacitor
-Os testes foram feitos com um capacitor de 150uF, mas não encontrei esse valor para comprar, então decidi comprar um de 220uF, que é ainda melhor e possui um preço muito próximo ao do capacitor de 100uF
 - 1 capacitor de 220uF e 35V (A tensão real não passará de 26V): R$ 0,34 (([loja](https://www.baudaeletronica.com.br/capacitor-eletrolitico-220uf-35v.html)))
 ## Diodo zener
 - 1 diodo zener 1N4743 [13V / 1W] (A potência real não passará de 50mW): R$ 0,18  ([loja](https://www.baudaeletronica.com.br/diodo-zener-1n4743-13v-1w.html))
-
+## Transformador
+- 1 transformador de 127v para 18v, com corrente máxima 3A (A corrente real chegará próxima de 1.3A em cada ciclo ao carregar o capacitor, mas pode ultrapassar 2.6A no primeiro ciclo): R$ 49.99 ([loja](https://produto.mercadolivre.com.br/MLB-1300844398-transformador-1818v-3a-trafo-bivolt-_JM?quantity=1#position=1&type=item&tracking_id=ada41903-7303-418c-9af9-6d00176bfbd2))
 
 # O potenciômetro e resistores adjacentes
  No circuito, pode-se ver que existem dois resistores adjacentes ao potenciômetro.
@@ -69,7 +69,7 @@ O código para esse cálculo está no arquivo script.py, nas funções get_max_R
 Por não ser ideal, o diodo zener não "quebra" a tensão exatamente em 13v, mas um pouco abaixo, o que faz a tensão de saída oscilar um pouco
 
 # O capacitor e o transformador
-Foi escolhido um transformador de razão 0.15 e um capacitor de 150uF. Esses valores foram escolhidos para garantir uma tensão de no mínimo 18v no resistor acima do diodo zener, o qual teve seu valor calculado acima de modo a reduzir esse valor de 18v a um valor de no mínimo 13v (o excedente será absorvido pelo diodo zener).
+Foi escolhido um transformador de 127v para 18v e um capacitor de 220uF. Esses valores foram escolhidos para garantir uma tensão de no mínimo 18v no resistor acima do diodo zener, o qual teve seu valor calculado acima de modo a reduzir esse valor de 18v a um valor de no mínimo 13v (o excedente será absorvido pelo diodo zener).
 
 # O transistor e a corrente de saída
 Utilizando os calculos acima, é possível criar um circuito que forneça exatamente as tensões desejadas para a corrente de 100mA pedida. Porém, erros começam a ocorrer quando uma corrente menor que 100mA é fornecida.
