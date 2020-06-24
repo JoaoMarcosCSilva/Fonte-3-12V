@@ -18,6 +18,27 @@ Valores calculados a partir dos definidos acima:
 - Resistência do resistor à esquerda do potenciômetro (entre o mesmo e o diodo zener): calculada em 127.7656745249
 - Resistência acima do diodo zener: calculada em 2.1987160495k
 
+# Preços dos Componentes
+## Resistor à direita do potenciômetro
+- 1 resistor 2k de 1/4 W (A potência real não passará de 9mW): R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-2k-5-1-4w.html))
+## Resistor à esquerda do potenciômetro
+O valor calculado de 127.7656745249 será aproximado por um resistor de 100R e um de 30R conectados em série
+- 1 resistor 100R de 1/4 W (A potência real não passará de 700uW): R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-100r-5-1-4w.html))
+- 1 resistor 30R de 1/4 W (A potência real não passará de 700uW): R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-30r-5-1-4w.html))
+## Potenciômetro
+O valor calculado de 4279.8210388 será aproximado por um potenciômetro de 5k (o qual não deverá ser rotacionado até o fim)
+- 1 Potenciômetro Linear de 5k com potência máxima de 0.2W (A potência real não passará de 19mW): R$ 0,99  ([loja](https://www.baudaeletronica.com.br/potenciometro-linear-de-5k-5000.html))
+## Resistor acima do diodo zener
+O valor calculado de 2198.7160495 será aproximado por um resistor de 2k e um resistor de 200R
+- 1 resistor 2k de 1/4 W (A potência real não passará de 100mW): R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-2k-5-1-4w.html))
+- 1 resistor 200R de 1/4 W (A potência real não passará de 100mW) R$0.07 ([loja](https://www.baudaeletronica.com.br/resistor-200r-5-1-4w.html))
+## Capacitor
+Os testes foram feitos com um capacitor de 150uF, mas não encontrei esse valor para comprar, então decidi comprar um de 220uF, que é ainda melhor e possui um preço muito próximo ao do capacitor de 100uF
+- 1 capacitor de 220uF e 35V (A tensão real não passará de 26V): R$ 0,34 (([loja](https://www.baudaeletronica.com.br/capacitor-eletrolitico-220uf-35v.html)))
+## Diodo zener
+- 1 diodo zener 1N4743 [13V / 1W] (A potência real não passará de 50mW): R$ 0,18  ([loja](https://www.baudaeletronica.com.br/diodo-zener-1n4743-13v-1w.html))
+
+
 # O potenciômetro e resistores adjacentes
  No circuito, pode-se ver que existem dois resistores adjacentes ao potenciômetro.
  ## O resistor à direita
