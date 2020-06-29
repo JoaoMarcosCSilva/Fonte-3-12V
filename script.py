@@ -5,16 +5,16 @@ V_max = 12
 V_min = 3
 
 # Queda de tensão (positiva) entre a base e o emissor do transistor
-V_be = 714.612e-3
+V_be = 714.547e-3
 
 # Resistência do resistor depois do potenciômetro
-Rb = 2000
+Rb = 2700
 
 # Corrente passando pela base do transistor (deveria ser exatamente 1ma, mas no falstad dá esse valor aí)
-iB = 249.377e-6
+iB = 497.512e-6
 
 # Tensão mínima garantida pelo capacitor
-Vc = 18
+Vc = 19
 
 # Tensão de quebra do diodo zener
 Vz = 13
