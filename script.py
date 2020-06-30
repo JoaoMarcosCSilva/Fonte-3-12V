@@ -1,30 +1,36 @@
+from math import sqrt
+
 # CONFIGURAÇÃO
 
 # Tensão máxima e mínima da fonte
-V_max = 12
-V_min = 3
+V_max = 12.1
+V_min = 2.8
 
 # Queda de tensão (positiva) entre a base e o emissor do transistor
-V_be = 714.547e-3
+V_be = 1.292
 
 # Resistência do resistor depois do potenciômetro
-Rb = 2700
+Rb = 4500
 
 # Corrente passando pela base do transistor (deveria ser exatamente 1ma, mas no falstad dá esse valor aí)
-iB = 497.512e-6
+iB = 2.475e-6
 
 # Tensão mínima garantida pelo capacitor
 Vc = 19
 
 # Tensão de quebra do diodo zener
-Vz = 13
-
-
-def get_Ra(V, R, Rb, x = 0):
-    return (Rb + R - x)*(Vz - V)/(V + iB*Rb + iB*R - iB*x) - x
+Vz = 14.9
 
 def get_R(V, Rb):
-    return get_Ra(V, 0, Rb, 0)
+    a = -iB
+    b = V - iB*Rb
+    c = Rb * (Vz - V)
+    D = sqrt(b*b - 4*a*c)
+    return -(-b + D)/(2*a)
+
+def get_Ra(V, R):
+    i = Vz/(R) + iB
+    return (Vz - V)/i
 
 def get_irb(V, Rb, R, x):
     return V/(Rb + x)
@@ -44,7 +50,7 @@ def get_P_Rz(Vc, Vz, ira):
 V_max += V_be
 V_min += V_be
 R_tot = get_R(V_min, Rb)
-Ra = get_Ra(V_max, R_tot, Rb)
+Ra = get_Ra(V_max, R_tot + Rb)
 R = R_tot - Ra
 
 irb_min = get_irb(V_min, Rb, R, 0)
