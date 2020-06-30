@@ -10,7 +10,7 @@ V_min = 2.8
 V_be = 1.292
 
 # Resistência do resistor depois do potenciômetro
-Rb = 4500
+Rb = 4300
 
 # Corrente passando pela base do transistor (deveria ser exatamente 1ma, mas no falstad dá esse valor aí)
 iB = 2.475e-6
