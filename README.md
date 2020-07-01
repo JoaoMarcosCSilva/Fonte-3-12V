@@ -6,8 +6,8 @@
 ![Circuito](circuito.png)
 
 Valores pré-determinados:
-- Tensão máxima e mínima: 12.1v e 2.9v (uma pequena margem de erro é usada para garantir que as tensões necessárias serão fornecidas)
-- Queda de tensão entre a base do primeiro transistor e o emissor do último: 1.292V (medido no falstad)
+- Tensão máxima e mínima: 12v e 3v
+- Queda de tensão entre a base do primeiro transistor e o emissor do último: 1.292V (medido no falstad, muda levemente para correntes diferentes)
 - Resistência do resistor à direita do potenciômetro: 4k3 (explicação abaixo)
 - Ganho dos transistores: 200 (explicação abaixo)
 - Corrente máxima na base do transistor: 2.475 uA (medido no falstad)
@@ -15,22 +15,22 @@ Valores pré-determinados:
 - Tensão de quebra do diodo zener: 15v (explicação abaixo)
 
 Valores calculados a partir dos definidos acima:
-- Resistência máxima do potenciômetro: calculada em 9733.718289721588
-- Resistência do resistor à esquerda do potenciômetro (entre o mesmo e o diodo zener): calculada em 1575.714758526355
-- Resistência acima do diodo zener: calculada em 4285.349462716911
+- Resistência máxima do potenciômetro: calculada em 8997.001013056068
+- Resistência do resistor à esquerda do potenciômetro (entre o mesmo e o diodo zener): calculada em 1704.4225888350963
+- Resistência acima do diodo zener: calculada em 3991.6219879041864
 
 # Preços dos Componentes
 OBS: Preços atualizados em 20/06/2020
 ## Resistor à direita do potenciômetro
 - 1 resistor 4k3 de 1/4 W (A potência real não passará de 4mW): R$0.08 ([loja](https://www.baudaeletronica.com.br/resistor-4k3-5-1-4w.html))
 ## Resistor à esquerda do potenciômetro
-O valor calculado de 1575.714758526355 será aproximado por um resistor de 1k5 (a diferença na voltagem final é muito pequena)
+O valor calculado de 1704.4225888350963 será aproximado por um resistor de 1k5 (a diferença é usada pra garantir uma margem de erro)
 - 1 resistor 1k5 de 1/4 W (A potência real não passará de 450uW): R$0.08 ([loja](https://www.baudaeletronica.com.br/resistor-1k5-5-1-4w.html))
 ## Potenciômetro
-O valor calculado de 9733.718289721588 será aproximado por um potenciômetro de 10k
+O valor calculado de  8997.001013056068 será aproximado por um potenciômetro de 10k (que não deve ser rotacionado até o gim)
 - 1 Potenciômetro Linear de 10k com potência máxima de 0.2W: R$ 1,46  ([loja](https://www.baudaeletronica.com.br/potenciometro-linear-de-10k-10000.html))
 ## Resistor acima do diodo zener
-O valor calculado de 4285.349462716911 será aproximado por dois resistores de 2k em série
+O valor calculado de 3991.6219879041864 será aproximado por dois resistores de 2k em série
 - 2 resistores 2k de 1/4 W (A potência real não passará de 20mW): R$0.08 cada ([loja](https://www.baudaeletronica.com.br/resistor-2k-5-1-4w.html))
 ## Capacitor
 - 1 capacitor de 220uF e 35V (A tensão real não passará de 25V): R$ 0,38 (([loja](https://www.baudaeletronica.com.br/capacitor-eletrolitico-220uf-35v.html)))
