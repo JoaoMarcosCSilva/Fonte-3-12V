@@ -1,7 +1,12 @@
 # Fonte 3-12V
  Circuito de uma fonte de 100mA de 3 a 12 volts
  Para executar o código com os cálculos dos valores finais obtidos (listados abaixo), execute:
+ 
     python script.py
+
+[Circuito Ideal](http://tinyurl.com/yblvf7et)
+
+[Circuito Real](http://tinyurl.com/ybcebmec)
 
 ![Circuito](circuito.png)
 
