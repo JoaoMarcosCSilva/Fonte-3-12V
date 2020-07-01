@@ -39,7 +39,7 @@ O valor calculado de 3991.6219879041864 será aproximado por dois resistores de 
 ## Transformador
 - 1 transformador de 127v para 18v, com corrente máxima 3A (A corrente real chegará próxima de 1.3A em cada ciclo ao carregar o capacitor, mas pode ultrapassar 2.6A no primeiro ciclo): R$ 49.99 ([loja](https://produto.mercadolivre.com.br/MLB-1300844398-transformador-1818v-3a-trafo-bivolt-_JM?quantity=1#position=1&type=item&tracking_id=ada41903-7303-418c-9af9-6d00176bfbd2))
 ## Ponte Retificadora
-- 1 ponte retificadora KBPC1510: R$3.13 ([loja](https://www.baudaeletronica.com.br/ponte-retificadora-kbpc1510.html))
+- 1 ponte retificadora KBU1010: R$3.70 ([loja](https://www.baudaeletronica.com.br/ponte-retificadora-kbu1010.html))
 ## Transistores
 - 2 transistores NPN BC546 de ganho 200: R$0.24 cada ([loja](https://www.baudaeletronica.com.br/transistor-npn-bc546.html))
 
