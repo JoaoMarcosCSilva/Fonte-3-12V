@@ -8,6 +8,8 @@
 
 [Circuito Real](http://tinyurl.com/ybcebmec)
 
+[Vídeo](https://youtu.be/PqBpsNU2R8g)
+
 ## Circuito
 ![Circuito](circuito.png)
 
