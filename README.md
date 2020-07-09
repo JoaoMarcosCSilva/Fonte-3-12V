@@ -8,7 +8,14 @@
 
 [Circuito Real](http://tinyurl.com/ybcebmec)
 
+## Circuito
 ![Circuito](circuito.png)
+
+## Esquemático
+![Esquemático](esquematico.png)
+
+## PCB
+![PCB](pcb.png)
 
 Valores pré-determinados:
 - Tensão máxima e mínima: 12v e 3v
